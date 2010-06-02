@@ -1,7 +1,7 @@
 plotlowertri <-
 function(input, valuename = "r", pchlist = c(19, 17, 15, 1, 5, 2, 7),
          interval = 6, cex = 1, ncex = 1, int =1.2, add.number = TRUE, 
-         size = FALSE, add.text = FALSE, show.legend = TRUE, digits = 2 )
+         size = FALSE, add.text = FALSE, show.legend = TRUE, digits = 2)
 {
    if (!is.matrix(input))
    { input = as.matrix(input)
@@ -12,7 +12,7 @@ function(input, valuename = "r", pchlist = c(19, 17, 15, 1, 5, 2, 7),
      {stop("The input data must be a square matrix.\n")}
    if (!(interval+1)==length(pchlist))
      {stop("Pchlist must be equal to interval + 1.\n")}
-	 
+ 
    if (nrow(input) < 10 )
    {cat(
    "Warning: Too few rows, please adjust the legend using \"cex\" and \"int\".\n", 
@@ -27,12 +27,12 @@ function(input, valuename = "r", pchlist = c(19, 17, 15, 1, 5, 2, 7),
     else
     { pchlist = pchlist }
     interval = interval
-	d <- as.dist(input)
+d <- as.dist(input)
     seqn  <- (seq(0, interval^2, by = interval))/(interval^2)
     limit0 <- round((min(d) + (max(d)-min(d))*seqn), digits)
     limit <- limit0[c(-1, -length(limit0))]
-	limit <- sort(limit, decreasing = TRUE)
-	
+limit <- sort(limit, decreasing = TRUE)
+
     matrix <- lower.tri(input)
     plot(x = 0:nrow(matrix),y = 0:nrow(matrix), type = "n", axes = FALSE, xlab="", ylab="") 
     xleft = 0
@@ -76,9 +76,9 @@ function(input, valuename = "r", pchlist = c(19, 17, 15, 1, 5, 2, 7),
               text(x1, y1, as.character(textloc), cex = ncex)
             }
        }
-      if (show.legend)	  
+      if (show.legend)  
        {
-	    xlegend <- ncol(input)
+    xlegend <- ncol(input)
         for (k in 0:(length(limit)))  
          { 
              ylegend <- nrow(input) - k * int
@@ -86,7 +86,7 @@ function(input, valuename = "r", pchlist = c(19, 17, 15, 1, 5, 2, 7),
              if (k == 0)
              {
               text(xlegend*0.68, ylegend, paste(formatC(sprintf("%.2f",limit[k + 1]), width = 5)))
-			  text(xlegend*0.76, ylegend, expression(""<=""))
+  text(xlegend*0.76, ylegend, expression(""<=""))
               text(xlegend*0.8,  ylegend, valuename)
              }
              if (! k == 0 & !k == length(limit))
@@ -94,7 +94,7 @@ function(input, valuename = "r", pchlist = c(19, 17, 15, 1, 5, 2, 7),
               text(xlegend*0.88, ylegend, paste("<", formatC(sprintf("%.2f", limit[k]), width = 5)))
               text(xlegend*0.8,  ylegend, valuename)
               text(xlegend*0.68, ylegend, paste(formatC(sprintf("%.2f", limit[k+1]), width = 5)))
-			  text(xlegend*0.76, ylegend, expression(""<=""))
+  text(xlegend*0.76, ylegend, expression(""<=""))
               }
              if (k == length(limit))
               {

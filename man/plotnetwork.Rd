@@ -7,11 +7,13 @@ Correlation network plot
 This function could be used to plot correlation network, with less than 15 sites (recommended). The points lie in a circle with lines connected. Blue lines indicate negative values and the red ones the positive ones.
 }
 \usage{
-plotnetwork(datainput, interval = 8, xlim = c(-2,4), 
-ylim=c(-2.4,2.2), lty = c(1,2,3,4,4,3,2,1,5), value = "r", 
-legendx = 2.5, legendy = 0, right = 0.9,intcept = 0.22, 
-left = 0.15, linelength = 0.3, cex = 3, lwd = 1.5, 
-show.legend = TRUE, digits = 2, ...)
+plotnetwork(datainput, interval = 8, xlim = c(-2.5,5), 
+ylim=c(-3.2,3.2), lty = c(1,2,3,4,4,3,2,1,5), value = "r", 
+legendx = 3, legendy = 0, right = 1.2, intcept = 0.22, 
+left = 0.35, linelength = 0.3, cex = 3, lwd = 1.5, 
+show.legend = TRUE, digits = 2, dit = 1.2, 
+number.label = TRUE, text.label = TRUE, 
+linecol = c("red", "black"), ...)
 }
 \arguments{
   \item{datainput}{
@@ -65,6 +67,19 @@ Whether the legend should be drawn.
   \item{digits}{
 Number of digits displayed in legend.
 }
+  \item{dit}{
+Distance of text labels from each corner.
+}
+  \item{number.label}{
+Whether the number label should be drawn.
+}
+  \item{text.label}{
+Whether the text label should be drawn.
+}
+  \item{linecol}{
+Colors of the lines speciefied. The positive correlation will be drawn in the first color specified.
+}
+
 }
 \details{
 This function could be used to plot connections for less than 20 sites 
@@ -89,6 +104,10 @@ data(testdata)
 spmatrix <- data2mat(testdata)
 result <- sp.pair(spmatrix)
 plotnetwork(result$Pearson)
+
+plotnetwork(result$Pearson, linecol = c("orange", "blue"),
+number.label = FALSE)
+
 title("Pearson Correlation Network")
 }
 \keyword{ network }

@@ -12,26 +12,28 @@ Package for species association analysis and plotting, including species matrix 
 \tabular{ll}{
 Package: \tab spaa\cr
 Type: \tab Package\cr
-Version: \tab 0.1.0\cr
+Version: \tab 0.1.1\cr
 Date: \tab 2010-05-18\cr
 License: \tab GPL-2\cr
 LazyLoad: \tab yes\cr
 }
 This package will be used in examining species association.
 
-The function \code{data2mat} converts field data record to species matrix.
+\code{add.col} adds information from one dataframe to another.
 
-The function \code{freq.calc} returns the relative frequency for each species.
+\code{data2mat} converts field data record to species matrix.
 
-The function \code{plotlowertri} could plot the semimatrix using setted types of points.
+\code{freq.calc} returns the relative frequency for each species.
 
-The function \code{plotnetwork} could plot the simple correlation network.
+\code{plotlowertri} could plot the semimatrix using setted types of points.
 
-The function \code{sp.assoc} gives the total species association results.
+\code{plotnetwork} could plot the simple correlation network.
 
-The function \code{sp.pair} calculates species association between each pair of species.
+\code{sp.assoc} gives the total species association results.
 
-The function \code{sub.sp.matrix} could be used to subset a standard species matrix, according to species relative frequency.
+\code{sp.pair} calculates species association between each pair of species.
+
+\code{sub.sp.matrix} could be used to subset a standard species matrix, according to species relative frequency.
 
 }
 \author{
@@ -63,9 +65,23 @@ JIAN Minfei, LIU qijing, ZHU du, YOU hai. (2009). Inter-specific correlations am
 \examples{
 data(testdata)
 testdata
+data(splist)
+splist
+
+## adding information
+## add genera from dataframe B to dataframe A.
+add.col(inputA = testdata, inputB = splist, add = "genera",
+according = "species")
+## add family from dataframe B to dataframe A.
+add.col(inputA = testdata, inputB = splist, add = "family", 
+according = "species")
+
+
+### data tranformation
 (spmatrix <- data2mat(testdata))
 #Species association
 sp.assoc(spmatrix)
+
 
 # Species association between each pair of species
 (result <- sp.pair(spmatrix))
