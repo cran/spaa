@@ -27,7 +27,7 @@ Assume we have speciesA and speciesB, \code{a}, \code{b}, \code{c}, \code{d} tha
 
 \code{d} = number of plots without speciesA or speciesB.
 
-\code{N} = \code{{a+b+c+d}{a+b+c+d}}
+\code{N} = \code{a+b+c+d}
 
 
 This function are using the following formula:

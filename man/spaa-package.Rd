@@ -3,37 +3,43 @@
 \alias{spaa}
 \docType{package}
 \title{
-Species Association Analysis
+Species Association Analysis and Niche Overlap
 }
 \description{
-Package for species association analysis and plotting, including species matrix preparation from raw list, lower matrix plotting, simple network plotting etc.
+Package for species association analysis and niche overlap
 }
 \details{
 \tabular{ll}{
 Package: \tab spaa\cr
 Type: \tab Package\cr
-Version: \tab 0.1.1\cr
-Date: \tab 2010-05-18\cr
+Version: \tab 0.1.2\cr
+Date: \tab 2010-08-11\cr
 License: \tab GPL-2\cr
 LazyLoad: \tab yes\cr
 }
 This package will be used in examining species association.
 
-\code{add.col} adds information from one dataframe to another.
+\code{\link{add.col}} adds information from one dataframe to another.
 
-\code{data2mat} converts field data record to species matrix.
+\code{\link{data2mat}} converts field data record to species matrix.
 
-\code{freq.calc} returns the relative frequency for each species.
+\code{\link{freq.calc}} returns the relative frequency for each species.
 
-\code{plotlowertri} could plot the semimatrix using setted types of points.
+\code{\link{plotlowertri}} plots the semimatrix using setted types of points.
 
-\code{plotnetwork} could plot the simple correlation network.
+\code{\link{plotnetwork}} plots the simple correlation network.
 
-\code{sp.assoc} gives the total species association results.
+\code{\link{sp.assoc}} gives the total species association results.
 
-\code{sp.pair} calculates species association between each pair of species.
+\code{\link{sp.pair}} calculates species association between each pair of species.
 
-\code{sub.sp.matrix} could be used to subset a standard species matrix, according to species relative frequency.
+\code{\link{sub.sp.matrix}} obtains the  subset of a standard species matrix, according to species relative frequency.
+
+\code{\link{niche.overlap}} calculates species niche overlap.
+
+\code{\link{niche.overlap.boot}} bootstrap the spcies niche overlap
+
+\code{\link{niche.width}} calculates species niche width.
 
 }
 \author{
@@ -56,6 +62,11 @@ Shi Zuomin, Liu Shirong, Cheng Ruimei, Jiang Youxu. (2001). Interspecific associ
 Zhou XY, Wang BS, Li MG, Zan QJ. (2000). An analysis of interspecific associations in secondary  succession forest communities in Heishiding Nature Reserve, Guangdong Province. Acta Phytoecologica Sinica. 24:332-339
 
 JIAN Minfei, LIU qijing, ZHU du, YOU hai. (2009). Inter-specific correlations among dorminant populations of tree layer species in evergreen broad-leaved forest in Jiulianshan Mountain of subtropical China. Chinese Journal of Plant Ecology. 33:672-680 
+
+Zhang Jin-tun,(2004 ) Quantitative Ecology, Science Press, Beijing
+
+Nicholas J. Gotelli. 2000. Null model analysis of species co-occurrence patterns. Ecology 81:2606-2621. http://esapubs.org/archive/ecol/E081/022/EcoSim%20Help/Niche/NicheOverlap.htm
+
 
 }
 
@@ -100,7 +111,7 @@ plotlowertri(result$Pearson, int = 0.5, cex=3, interval = 4,
 pchlist = c(19, 17, 15, 1, 5), size = TRUE)
 title("Pearson Correlation Lower Matrix Plot")
 
-##
+## plot lower matrix
 ## Using BCI data for lower matrix plot
 library(vegan)
 data(BCI)
@@ -108,5 +119,11 @@ data(BCI)
 sub <- sub.sp.matrix(BCI, common = 30)
 ## Set the digits to 1
 plotlowertri(cor(sub), size = TRUE, cex = 3, digits = 1)
+
+#### Niche width and niche overlap
+data(datasample)
+niche.overlap.boot(datasample[,1:3], method = "levins")
+niche.overlap(datasample, method = "levins")
+niche.width(datasample[,1:3], method = "shannon")
 
 }
