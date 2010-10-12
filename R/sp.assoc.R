@@ -1,10 +1,9 @@
 sp.assoc <-
 function(matr)
 {  
-   if(any(is.na(matr)))
-   {
-     matr <- na.omit(matr)
-     cat("The data matrix contains NA, and have been removed.\n")
+   if(any(is.na(matr))){
+       matr <- na.omit(matr)
+       cat("The data matrix contains NA, and have been removed.\n")
    }
    matr[matr>1] <- 1
    frq <- freq.calc(matr)

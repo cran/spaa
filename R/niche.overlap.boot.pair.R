@@ -36,7 +36,8 @@ function (vectorA, vectorB, method = c("levins","schoener","petraitis","pianka",
 		                                   obs <- niche.overlap.pair(vectorA, vectorB, method ="morisita")
 										   booted[i] <- niche.overlap.pair(sample(vectorA, replace = TRUE),sample(vectorB, replace = TRUE), method = "morisita")
                                            }							  
-    	                              }
+    	                              
+									  }
 		                        
 								}
 		                  

@@ -42,6 +42,6 @@ function(vectA, vectB, method = c("levins","schoener","petraitis","pianka","czec
 	     				}
          
 	     		}
-	return(round(result,3))
+return(round(result,3))
 }
 
