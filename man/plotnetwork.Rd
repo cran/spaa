@@ -77,18 +77,15 @@ Whether the number label should be drawn.
 Whether the text label should be drawn.
 }
   \item{linecol}{
-Colors of the lines speciefied. The positive correlation will be drawn in the first color specified.
+Colours of the lines specified. The positive correlation will be drawn in the first colour specified.
 }
 
 }
 \details{
-This function could be used to plot connections for less than 20 sites 
-( above 20 are not recommend since there would be too many connections, 
-and difficult to obtain usefull information).
+This function could be used to plot the pairwise connections between less than 20 sites 
+( above 20 is not recommended since there would be too many connections).
 
-The lines will be in red or blue, according to whether the value is 
-positive or negative. Users may specify the line style and legends 
-position depends on their private interests.
+The lines will be in red or blue, according the sign of the value of association. Users can adjust the line style and legends based on their requirements.
 }
 \value{
 Correlation network plots.

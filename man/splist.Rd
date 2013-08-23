@@ -5,7 +5,7 @@
 species list used in function add.col()
 }
 \description{
-A species checklist example to be used in add.col()
+A species check list example to be used in add.col()
 }
 \usage{data(splist)}
 \format{

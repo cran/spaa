@@ -4,7 +4,7 @@
 Total species association
 }
 \description{
-Calculate species association as a whole 
+Calculate species association
 }
 \usage{
 sp.assoc(matr)
@@ -45,7 +45,7 @@ Variance of species number:
 
 \code{ S^{2}{T}=({1}{N})sum{j=1}^{N}(T{j}-t)^{2} }.
 
-Species reative frequency
+Species relative frequency
 
 \code{P{i}={n{i}}{N}}.
 

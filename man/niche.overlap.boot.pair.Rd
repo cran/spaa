@@ -7,7 +7,9 @@ Niche overlap boostrap utility function
 Compute the bootstrap value between two vectors. This is a internal function called by \code{niche.overlap.boot}, users are encouraged to use the latter function.
 }
 \usage{
-niche.overlap.boot.pair(vectorA, vectorB, method = c("levins", "schoener", "petraitis", "pianka", "czech", "morisita"), times = 999, quant = c(0.025, 0.975))
+niche.overlap.boot.pair(vectorA, vectorB, method = c("levins", 
+     "schoener", "petraitis", "pianka", "czech", "morisita"), 
+      times = 999, quant = c(0.025, 0.975))
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -31,9 +33,13 @@ Confidence interval of the bootstrap results.
 To do.
 }
 \value{
-This function will return a vector including the following elements:
-\code{"Observed","Boot mean","Boot std","Boot CI1", "Boot CI2", "times"}
-
+This function will return a vector including the following elements:\
+\code{"Observed", \
+"Boot mean", \
+"Boot std", \
+"Boot CI1", \
+"Boot CI2", \
+"times"} \
 }
 \references{
 Zhang Jin-tun,(2004 ) Quantitative Ecology, Science Press, Beijing

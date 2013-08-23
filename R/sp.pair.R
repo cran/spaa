@@ -31,7 +31,7 @@ function(matr)
            chisq[i,j]   <- ((((abs(a[i,j] * d[i,j] - b[i,j]*c[i,j]) 
                            - 0.5*N)^2)*N )/((a[i,j]+b[i,j])*(a[i,j]+c[i,j])*(b[i,j]
                            +d[i,j])*(c[i,j]+d[i,j])))
-           V[i,j]       <- ((a[i,j]+b[i,j])-(b[i,j]+c[i,j]))/(a[i,j]+b[i,j]+c[i,j]+d[i,j]) # V>0,positive, V<0,negative
+           V[i,j]       <- ((a[i,j]+d[i,j])-(b[i,j]+c[i,j]))/(a[i,j]+b[i,j]+c[i,j]+d[i,j]) # V>0,positive, V<0,negative # Thanks for Ms Xueni Zhang for pointing out the error.
            Ochiai[i,j]  <- a[i,j]/sqrt((a[i,j]+b[i,j])*(a[i,j]+c[i,j])) #Ochiai index
            Dice[i,j]    <- 2*a[i,j] /(2*a[i,j] + b[i,j] + c[i,j]) #Dice index
            Jaccard[i,j] <- a[i,j]/(a[i,j]+b[i,j]+c[i,j]) #Jaccard index
@@ -53,7 +53,7 @@ function(matr)
         dd[i,j] <- a[i,j] * d[i,j] - b[i,j] * c[i,j]
         }
    }
-   AC = data.frame() ##Association Coefficience
+   AC = data.frame() ## Association Coefficients
    for (i in 1: nrow(a)){
        for (j in 1: ncol(a)){
            if (a[i,j] * d[i,j] >= b[i,j] * c[i,j]){ 

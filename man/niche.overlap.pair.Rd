@@ -7,7 +7,8 @@ Niche overlap between one pair of species.
 Compute niche overlap index between one pair of species. Users are encouraged to used \code{\link{niche.overlap}} istead of this function.
 }
 \usage{
-niche.overlap.pair(vectA, vectB, method = c("levins", "schoener", "petraitis", "pianka", "czech", "morisita"))
+niche.overlap.pair(vectA, vectB, method = c("pianka", 
+     "schoener","petraitis","czech","morisita", "levins"))
 }
 \arguments{
   \item{vectA}{

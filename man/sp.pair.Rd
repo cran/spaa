@@ -38,7 +38,7 @@ Chi square (Yate's correction):
 
 V ratio:
 
-\code{V = ((a+b)-(b-c))/(a + b + c + d)}
+\code{V = ((a+d)-(b+c))/(a + b + c + d)}
 
 Jaccard index:
 

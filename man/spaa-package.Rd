@@ -12,8 +12,8 @@ Miscellaneous functions for analysis of species association and niche overlap.
 \tabular{ll}{
 Package: \tab spaa\cr
 Type: \tab Package\cr
-Version: \tab 0.2.0\cr
-Date: \tab 2010-10-12\cr
+Version: \tab 0.2.1\cr
+Date: \tab 2013-8-23\cr
 License: \tab GPL-2\cr
 LazyLoad: \tab yes\cr
 }
@@ -21,10 +21,6 @@ LazyLoad: \tab yes\cr
 \author{
 Author: Jinlong Zhang \email{jinlongzhang01@gmail.com}
 
-        Qiong Ding \email{dingqiong@ibcas.ac.cn}
-		
-		Jihong Huang \email{xjhjh@ibcas.ac.cn}
-		
 Maintainer: Jinlong Zhang \email{jinlongzhang01@gmail.com}
 }
 

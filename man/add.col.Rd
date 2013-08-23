@@ -21,11 +21,11 @@ add.col(inputA, inputB, add, according)
 \code{add} the column name in dataframe B to be add to dataframe A. musth be character.
 }
   \item{according}{
-\code{according} the comman column name specified to match the data entries from dataframe A and dataframe B. must be character. 
+\code{according} the common column name specified to match the data entries from dataframe A and dataframe B. must be character. 
 }
 }
 \details{
-This function can be used to add one column from dataframe B to dataframe A, according to the column names speciefied. Users have to make sure the to dataframes at least share the common names speciesfied. This function may be an alternative for \code{\link{merge}}
+This function can be used to add one column from dataframe B to dataframe A, according to the column names specified. Users have to make sure the to dataframes at least share the common names specified. This function may be an alternative for \code{\link{merge}}
 }
 
 

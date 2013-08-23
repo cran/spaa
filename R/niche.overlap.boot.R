@@ -1,5 +1,6 @@
 niche.overlap.boot <-
-function(mat, method = c("levins","schoener","petraitis","pianka","czech","morisita"), times = 999, quant = c(0.025, 0.975)){
+function(mat, method = c("pianka", "schoener", "petraitis",  "czech", "morisita", "levins"), times = 999, quant = c(0.025, 0.975)){
+     method = match.arg(method)
      result <- data.frame(col1 = rep(NA, 6))
      for(i in 1:(ncol(mat)-1)){
         for(j in (i+1):(ncol(mat))){

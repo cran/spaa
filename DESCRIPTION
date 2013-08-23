@@ -1,15 +1,16 @@
 Package: spaa
 Type: Package
 Title: SPecies Association Analysis
-Version: 0.2.0
-Date: 2010-10-12
-Author: Jinlong Zhang, Qiong Ding, Jihong Huang
+Version: 0.2.1
+Date: 2013-08-23
+Author: Jinlong Zhang
 Maintainer: Jinlong Zhang <jinlongzhang01@gmail.com>
 Description: Miscellaneous functions for analysing species association
         and niche overlap.
 License: GPL-2
 LazyLoad: yes
 Suggests: vegan
-Packaged: 2012-10-29 08:59:48 UTC; ripley
+Packaged: 2013-08-23 07:40:41 UTC; jlzhang
+NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2012-10-29 08:59:48
+Date/Publication: 2013-08-23 10:05:19

@@ -18,11 +18,11 @@ matrix of quadrat labels.
 distance matrix between each pair of quadrats
 }
   \item{type}{
-"quart" indicate four neighbours quadrats, "octal" indicate eight neighbour quadrats.
+"quart" indicates four neighbouring quadrats, "octal" indicate eight neighbouring quadrats.
 }
 }
 \details{
-species turnover based on the mean value between focus quadrat and their neighbours.
+species turnover based on the mean value between centred quadrat and its neighbours.
 }
 \value{
 matrix with species turnover.

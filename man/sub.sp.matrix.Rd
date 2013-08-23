@@ -14,7 +14,7 @@ sub.sp.matrix(spmatrix, freq = 0.5, common = NULL)
 The spmatrix is a standard species matrix with rows for plots and column for species.
 }
   \item{freq}{
-The value of relative frequency to be speciefied, species with higher relative frequency will be reserved in the output matrix. 
+The value of relative frequency to be specified, species with higher relative frequency will be reserved in the output matrix. 
 }
   \item{common}{
 The number of most common (according to relative frequency) species to be specified. 

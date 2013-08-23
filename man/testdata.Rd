@@ -2,7 +2,7 @@
 \alias{testdata}
 \docType{data}
 \title{
-Data used in example
+Example Data
 }
 \description{
 Data used in example in list format.

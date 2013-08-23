@@ -38,9 +38,9 @@ Jinlong Zhang \email{jinlongzhang01@gmail.com}
 \examples{
 
 # ### niche.width() example 
-# data(datasample)
-# niche.width(datasample, method = "levin")
-# niche.width(datasample, method = "shannon")
+data(datasample)
+niche.width(datasample, method = "levins")
+niche.width(datasample, method = "shannon")
 
 }
 

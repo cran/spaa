@@ -7,7 +7,8 @@ Niche overlap between each pair of species
 Compute niche overlap between each pair of species.
 }
 \usage{
-niche.overlap(mat, method = c("levins", "schoener", "petraitis", "pianka", "czech", "morisita"))
+niche.overlap(mat, method = c("levins", "schoener", 
+       "petraitis", "pianka", "czech", "morisita"))
 }
 
 \arguments{
