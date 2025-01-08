@@ -13,4 +13,3 @@ function(plotlab){
      dim(res) <- c(nx, ny)
      return(res)
 }
-

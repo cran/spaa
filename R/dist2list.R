@@ -1,6 +1,6 @@
 dist2list <-
 function(dist){
-    if(!class(dist) == "dist"){
+    if(!inherits(dist, "dist")){
         stop("the input data must be a dist object.")
     }
     dat <- as.data.frame(as.matrix(dist))
